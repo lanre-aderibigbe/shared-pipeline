@@ -1,14 +1,12 @@
 {
   "folders": [
     "../../ci",
-    "../../automation",
-    "../../deployments",
-    "../../code-scanning"
+    "../../cd",
+    "../../security-scans"
   ],
   "allowed_categories" : [
     "Continuous integration",
     "Deployment",
-    "Code Scanning",
-    "Automation"
+    "Code Scanning"
   ]
 }
