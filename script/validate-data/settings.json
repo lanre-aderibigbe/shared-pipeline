@@ -1,8 +1,6 @@
 {
   "folders": [
-    "../../ci",
-    "../../cd",
-    "../../security-scans"
+    "../../.github/workflows"
   ],
   "allowed_categories" : [
     "Continuous integration",

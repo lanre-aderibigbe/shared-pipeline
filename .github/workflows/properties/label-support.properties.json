@@ -1,0 +1,6 @@
+{
+    "name": "Label Support",
+    "description": "Create support label for issues in GitHub.",
+    "iconName": "",
+    "categories": ["Continuous integration", "github"]
+}

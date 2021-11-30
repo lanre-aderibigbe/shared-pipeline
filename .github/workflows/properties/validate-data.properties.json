@@ -1,0 +1,6 @@
+{
+    "name": "Validate",
+    "description": "Validate workflows.",
+    "iconName": "",
+    "categories": ["Continuous integration", "github"]
+}
