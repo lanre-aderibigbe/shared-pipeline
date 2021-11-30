@@ -1,6 +1,11 @@
 name: Docker Image CI
 
 on:
+  workflow_call:
+    inputs:
+      imageTag:
+        required: true
+        type: string
   # push:
   #   branches: [ $default-branch ]
   pull_request:
