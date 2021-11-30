@@ -1,0 +1,6 @@
+{
+    "name": "Stale Issue",
+    "description": "Create label for stale issues in GitHub.",
+    "iconName": "",
+    "categories": ["Continuous integration", "github"]
+}

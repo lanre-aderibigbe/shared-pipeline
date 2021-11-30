@@ -1,0 +1,6 @@
+{
+    "name": "Label Feature",
+    "description": "Create label for issues in GitHub.",
+    "iconName": "",
+    "categories": ["Continuous integration", "github"]
+}
