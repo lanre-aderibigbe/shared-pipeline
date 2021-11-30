@@ -2,6 +2,6 @@
     "name": "Deploy to Amazon EKS",
     "description": "Deploy a container to an Amazon EKS",
     "creator": "Amazon Web Services",
-    "iconName": "aws",
+    "iconName": "eks",
     "categories": ["Deployment", "Dockerfile"]
 }
