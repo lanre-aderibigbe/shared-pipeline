@@ -8,10 +8,10 @@ name: Docker
 on:
   schedule:
     - cron: $cron-daily
-  push:
-    branches: [ $default-branch ]
-    # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
+  # push:
+  #   branches: [ $default-branch ]
+  #   # Publish semver tags as releases.
+  #   tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ $default-branch ]
 
