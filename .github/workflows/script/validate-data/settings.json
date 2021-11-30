@@ -1,0 +1,12 @@
+{
+  "folders": [
+    "../../ci",
+    "../../cd",
+    "../../security-scans"
+  ],
+  "allowed_categories" : [
+    "Continuous integration",
+    "Deployment",
+    "Code Scanning"
+  ]
+}
