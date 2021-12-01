@@ -53,7 +53,7 @@ async function checkWorkflows(folders: string[], allowed_categories: string[]): 
         const fileType = basename(e.name, extname(e.name))
 
         const workflowFilePath = join(folder, e.name);
-        const propertiesFilePath = join(`${fileType}.properties.json`)
+        const propertiesFilePath = `${fileType}.properties.json`
 
         const workflowWithErrors = await checkWorkflow(workflowFilePath, propertiesFilePath, allowed_categories);
         if(workflowWithErrors.name && workflow_template_names.size == workflow_template_names.add(workflowWithErrors.name).size) {
