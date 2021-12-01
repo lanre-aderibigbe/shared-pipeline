@@ -25,7 +25,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Set short SHA
+      id: vars
+      run: echo "::set-output name=GITHUB_SHA_SHORT::$(git rev-parse --short HEAD)"
+    - name: Check short SHA
+      run: echo ${{ steps.vars.outputs.GITHUB_SHA_SHORT }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ inputs.image-tag }}
+      run: docker build . --file Dockerfile --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.GITHUB_SHA_SHORT }}
     - name: Push the Docker image
-      run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ inputs.image-tag }}
+      run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.GITHUB_SHA_SHORT }}
