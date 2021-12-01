@@ -1,6 +1,6 @@
 {
   "folders": [
-    "../../.github/workflows"
+    "../../.github/workflow-templates"
   ],
   "allowed_categories" : [
     "Continuous integration",
