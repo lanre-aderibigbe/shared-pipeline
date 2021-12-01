@@ -53,7 +53,7 @@ async function checkWorkflows(folders: string[], allowed_categories: string[]): 
         const fileType = basename(e.name, extname(e.name))
 
         const workflowFilePath = join(folder, e.name);
-        const propertiesFilePath = join(folder, "properties", `${fileType}.properties.json`)
+        const propertiesFilePath = join(`${fileType}.properties.json`)
 
         const workflowWithErrors = await checkWorkflow(workflowFilePath, propertiesFilePath, allowed_categories);
         if(workflowWithErrors.name && workflow_template_names.size == workflow_template_names.add(workflowWithErrors.name).size) {
@@ -91,7 +91,7 @@ async function checkWorkflow(workflowPath: string, propertiesPath: string, allow
     if (properties.iconName) {
       if(! /^octicon\s+/.test(properties.iconName)) {
         try {
-          await fs.access(`../../.github/icons/${properties.iconName}.svg`)
+          await fs.access(`../../.github/${properties.iconName}.svg`)
         } catch (e) {
           workflowErrors.errors.push(`No icon named ${properties.iconName} found`)
         }
