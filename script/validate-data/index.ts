@@ -91,7 +91,7 @@ async function checkWorkflow(workflowPath: string, propertiesPath: string, allow
     if (properties.iconName) {
       if(! /^octicon\s+/.test(properties.iconName)) {
         try {
-          await fs.access(`../../.github/workflow/${properties.iconName}.svg`)
+          await fs.access(`../../.github/workflows/${properties.iconName}.svg`)
         } catch (e) {
           workflowErrors.errors.push(`No icon named ${properties.iconName} found`)
         }
